@@ -10,6 +10,7 @@
                     <Grid.RowDefinitions>
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
                     </Grid.RowDefinitions>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition></ColumnDefinition>
@@ -18,9 +19,28 @@
                     <Label Text="Contacts Manager" FontSize="Large" FontAttributes="Bold" HorizontalTextAlignment="Center" Grid.Row="1"></Label>
                 </Grid>
             </Frame>
+
+            <Frame BackgroundColor="Transparent" BorderColor="Transparent">
+                <Grid ColumnSpacing="5">
+                    <Grid.RowDefinitions>
+                        <RowDefinition></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Entry x:Name="Search" Placeholder="Search" PlaceholderColor="Black" FontAttributes="Bold" FontSize="Small" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="5" BackgroundColor="Silver"></Entry>
+                    <Button Clicked="Searchbtn" ImageSource="search.png" Grid.Row="0" Grid.Column="6" HeightRequest="85" WidthRequest="95" BackgroundColor="Transparent" BorderColor="Transparent"></Button>
+                </Grid>
+            </Frame>
+            
             <Frame BackgroundColor="Silver">
                 <VerticalStackLayout>
-                    <ListView x:Name="ContactsList" ItemTapped="ContactsList_ItemTapped" >
+                    <ListView x:Name="ContactsList" ItemTapped="ContactsList_ItemTapped" RowHeight="55" HasUnevenRows="False" >
                         <ListView.ItemTemplate>
                             <DataTemplate>
                                 <TextCell Text="{Binding Name}" Detail="{Binding Cell}"></TextCell>

@@ -25,9 +25,9 @@ namespace ContactsManager.Data
             return await _connection.Table<ContactsModel>().ToListAsync();
         }
 
-        public async Task<ContactsModel> GetById(int id)
+        public async Task<List<ContactsModel>> GetById(string name)
         {
-            return await _connection.Table<ContactsModel>().Where(X => X.Id == id).FirstOrDefaultAsync();
+            return await _connection.Table<ContactsModel>().Where(X => X.Name == name).ToListAsync();
         }
 
         public async Task create(ContactsModel model)

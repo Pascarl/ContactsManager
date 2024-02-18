@@ -24,6 +24,11 @@ namespace ContactsManager
             var con = ContactsList.SelectedItem as ContactsModel;
              Navigation.PushAsync(new ViewContact(_contactsDbService, con));
         }
+
+        private async void Searchbtn(object sender, EventArgs e)
+        {
+           ContactsList.ItemsSource = await _contactsDbService.GetById(Search.Text);
+        }
     }
 
 }
