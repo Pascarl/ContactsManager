@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:Con="clr-namespace:ContactsManager.Models"
+             x:Class="ContactsManager.ViewContact"
+             x:DataType="Con:ContactsModel"
+             Title="ViewContact">
+    
+    <VerticalStackLayout BackgroundColor="SlateGray" Spacing="10" Padding="20">
+        <Frame BackgroundColor="Transparent" BorderColor="Transparent">
+            <Grid ColumnSpacing="10" RowSpacing="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Image Source="contacts.png" Grid.Row="0" HeightRequest="140" BackgroundColor="Transparent"></Image>
+                <Label Text="Contacts Manager" FontSize="Large" FontAttributes="Bold" HorizontalTextAlignment="Center" Grid.Row="1"></Label>
+            </Grid>
+        </Frame>
+        
+        <Frame BackgroundColor="Silver">
+            <VerticalStackLayout>
+                <Grid RowSpacing="10" ColumnSpacing="10">
+                    <Grid.RowDefinitions>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Label Text="Name:" TextColor="Black" FontAttributes="Bold" FontSize="Medium" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Grid.Row="0" Grid.Column="0" ></Label>
+                    <Label Text="{Binding Name}" FontAttributes="Bold" FontSize="Medium" VerticalTextAlignment="Center" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" ></Label>
+
+                    <Label Text="Email:" TextColor="Black" FontAttributes="Bold" FontSize="Medium" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Grid.Row="1" Grid.Column="0" ></Label>
+                    <Label Text="{Binding Email}" FontAttributes="Bold" FontSize="Medium" VerticalTextAlignment="Center" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" ></Label>
+
+                    <Label Text="Cell Number:" TextColor="Black" FontAttributes="Bold" FontSize="Medium" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Grid.Row="2" Grid.Column="0" ></Label>
+                    <Label Text="{Binding Cell}" FontAttributes="Bold" FontSize="Medium" VerticalTextAlignment="Center" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" ></Label>
+
+                    <Label Text="Cell Number 2:" TextColor="Black" FontAttributes="Bold" FontSize="Medium" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Grid.Row="3" Grid.Column="0" ></Label>
+                    <Label Text="{Binding Cell2}" FontAttributes="Bold" FontSize="Medium" VerticalTextAlignment="Center" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" ></Label>
+                </Grid>
+            </VerticalStackLayout>
+        </Frame>
+        
+        <Frame BackgroundColor="Transparent" BorderColor="Transparent">
+            <VerticalStackLayout>
+                <Grid ColumnSpacing="10" RowSpacing="15">
+                    <Grid.RowDefinitions>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Button Text="Edit" Clicked="Editbtn" FontAttributes="Bold" FontSize="Medium" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" HeightRequest="60" CornerRadius="35" BackgroundColor="Black" BorderColor="Transparent"></Button>
+                    <Button Text="Cancel" Clicked="Cancelbtn" FontAttributes="Bold" FontSize="Medium" Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="2" HeightRequest="60" CornerRadius="35" BackgroundColor="Black" BorderColor="Transparent"></Button>
+
+                    <Button Clicked="Callbtn" ImageSource="phone.png" Grid.Column="0" Grid.Row="1" BackgroundColor="Transparent" HeightRequest="100" WidthRequest="100"></Button>
+                    <Button Clicked="Wabtn" ImageSource="whatsapp.png" Grid.Column="1" Grid.Row="1"  BackgroundColor="Transparent" HeightRequest="100" WidthRequest="100"></Button>
+                    <Button Clicked="Emailbtn" ImageSource="email.png" Grid.Column="2" Grid.Row="1"  BackgroundColor="Transparent" HeightRequest="100" WidthRequest="100"></Button>
+                    <Button Clicked="Deletebtn" ImageSource="delete.png" Grid.Column="3" Grid.Row="1" BackgroundColor="Transparent" HeightRequest="100" WidthRequest="100"></Button>
+                </Grid>
+            </VerticalStackLayout>
+        </Frame>
+    </VerticalStackLayout>
+</ContentPage>

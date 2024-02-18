@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:con="clr-namespace:ContactsManager.Models"
+             x:Class="ContactsManager.EditContact"
+             x:DataType="con:ContactsModel"
+             Title="EditContact">
+    
+     <VerticalStackLayout BackgroundColor="SlateGray" Spacing="10" Padding="20">
+     <Frame BackgroundColor="Transparent" BorderColor="Transparent">
+         <Grid RowSpacing="5">
+             <Grid.RowDefinitions>
+                 <RowDefinition></RowDefinition>
+                 <RowDefinition></RowDefinition>
+             </Grid.RowDefinitions>
+             <Grid.ColumnDefinitions>
+                 <ColumnDefinition></ColumnDefinition>
+             </Grid.ColumnDefinitions>
+             <Image Source="contacts.png" Grid.Row="0" HeightRequest="140" BackgroundColor="Transparent"></Image>
+             <Label Text="Contacts Manager" FontSize="Large" FontAttributes="Bold" HorizontalTextAlignment="Center" Grid.Row="1"></Label>
+         </Grid>
+     </Frame>
+         
+     <Frame BackgroundColor="Silver" BorderColor="Transparent">
+         <VerticalStackLayout>
+             <Grid ColumnSpacing="10" RowSpacing="10">
+                 <Grid.RowDefinitions>
+                     <RowDefinition></RowDefinition>
+                     <RowDefinition></RowDefinition>
+                     <RowDefinition></RowDefinition>
+                     <RowDefinition></RowDefinition>
+                 </Grid.RowDefinitions>
+                 <Grid.ColumnDefinitions>
+                     <ColumnDefinition></ColumnDefinition>
+                     <ColumnDefinition></ColumnDefinition>
+                     <ColumnDefinition></ColumnDefinition>
+                 </Grid.ColumnDefinitions>
+                    <Label Text="Name:" FontSize="Medium" FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Grid.Row="0" Grid.Column="0" ></Label>
+                    <Entry Text="{Binding Name}" x:Name="ConName" Placeholder="{Binding Name}" FontSize="Medium" FontAttributes="Bold" VerticalTextAlignment="Center" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" ></Entry>
+
+                    <Label Text="Email:" FontSize="Medium" FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Grid.Row="1" Grid.Column="0"></Label>
+                    <Entry Text="{Binding Email}" x:Name="ConEmail" FontSize="Medium" FontAttributes="Bold" VerticalTextAlignment="Center" Placeholder="{Binding Email}" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" ></Entry>
+
+                    <Label Text="Cell Number:" FontSize="Medium" FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Grid.Row="2" Grid.Column="0" ></Label>
+                    <Entry Text="{Binding Cell}" x:Name="ConCell" FontSize="Medium" FontAttributes="Bold" VerticalTextAlignment="Center" Placeholder="{Binding Cell}" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" ></Entry>
+
+                    <Label Text="Cell Number 2:" FontSize="Medium" FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Grid.Row="3" Grid.Column="0" ></Label>
+                    <Entry Text="{Binding Cell2}" FontSize="Medium" FontAttributes="Bold"  VerticalTextAlignment="Center" x:Name="ConCell2" Placeholder="{Binding Cell2}" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2"></Entry>
+             </Grid>
+         </VerticalStackLayout>
+     </Frame>
+         
+        <Frame BackgroundColor="SlateGray" BorderColor="SlateGray">
+            <VerticalStackLayout>
+                <Grid ColumnSpacing="10">
+                    <Grid.RowDefinitions>
+                        <RowDefinition></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Button Text="Accept" FontAttributes="Bold" FontSize="Medium" Clicked="Acceptbtn" Grid.Row="0" Grid.Column="0" HeightRequest="65" CornerRadius="35" BackgroundColor="Black"></Button>
+                    <Button Text="Cancel" FontAttributes="Bold" FontSize="Medium" Clicked="Cancelbtn" Grid.Row="0" Grid.Column="1"  HeightRequest="65" CornerRadius="35" BackgroundColor="Black"></Button>
+                </Grid>
+            </VerticalStackLayout>
+        </Frame>
+    </VerticalStackLayout>
+</ContentPage>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ContactsManager.AddContact"
+             Title="AddContact">
+    <VerticalStackLayout BackgroundColor="SlateGray" Padding="20">
+        <Frame BackgroundColor="Transparent" BorderColor="Transparent">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Image Source="contacts.png" Grid.Row="0" HeightRequest="140" BackgroundColor="Transparent"></Image>
+                <Label Text="Contacts Manager" FontSize="Large" FontAttributes="Bold" HorizontalTextAlignment="Center" Grid.Row="1"></Label>
+            </Grid>
+        </Frame>
+        
+        <Frame BackgroundColor="Silver">
+            <VerticalStackLayout>
+                <Grid RowSpacing="10" ColumnSpacing="10">
+                    <Grid.RowDefinitions>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Label Text="Name:" FontSize="Medium" FontAttributes="Bold" Grid.Row="0" Grid.Column="0" VerticalTextAlignment="Center" ></Label>
+                    <Entry x:Name="ConName" FontSize="Medium" FontAttributes="Bold" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" ></Entry>
+
+                    <Label Text="Email:" FontSize="Medium" FontAttributes="Bold" Grid.Row="1" Grid.Column="0" VerticalTextAlignment="Center" ></Label>
+                    <Entry x:Name="ConEmail" FontSize="Medium" FontAttributes="Bold" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" ></Entry>
+
+                    <Label Text="Cell Number:" FontSize="Medium" FontAttributes="Bold" Grid.Row="2" Grid.Column="0" VerticalTextAlignment="Center" ></Label>
+                    <Entry x:Name="ConCell" FontSize="Medium" FontAttributes="Bold" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" ></Entry>
+
+                    <Label Text="Cell Number 2:" FontSize="Medium" FontAttributes="Bold" Grid.Row="3" Grid.Column="0" VerticalTextAlignment="Center" ></Label>
+                    <Entry x:Name="Concell2" FontSize="Medium" FontAttributes="Bold" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" ></Entry>
+                </Grid>
+            </VerticalStackLayout>
+        </Frame>
+        <Frame BackgroundColor="Transparent" BorderColor="Transparent">
+            <VerticalStackLayout>
+                <Grid ColumnSpacing="10">
+                    <Grid.RowDefinitions>
+                        <RowDefinition></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Button Text="Add" Clicked="Addbtn" FontAttributes="Bold" FontSize="Medium" Grid.Row="0" Grid.Column="0" CornerRadius="25" HeightRequest="65" Background="Black"></Button>
+                    <Button Text="Cancel" Clicked="Cancelbtn" FontAttributes="Bold" FontSize="Medium" Grid.Row="0" Grid.Column="1" CornerRadius="25" HeightRequest="65" Background="Black"></Button>
+                </Grid>
+            </VerticalStackLayout>
+        </Frame>
+    </VerticalStackLayout>
+</ContentPage>
