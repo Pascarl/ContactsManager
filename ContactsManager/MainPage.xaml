@@ -33,8 +33,8 @@
                         <ColumnDefinition></ColumnDefinition>
                         <ColumnDefinition></ColumnDefinition>
                     </Grid.ColumnDefinitions>
-                    <Entry x:Name="Search" Placeholder="Search" PlaceholderColor="Black" FontAttributes="Bold" FontSize="Small" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="5" BackgroundColor="Silver"></Entry>
-                    <Button Clicked="Searchbtn" ImageSource="search.png" Grid.Row="0" Grid.Column="6" HeightRequest="85" WidthRequest="95" BackgroundColor="Transparent" BorderColor="Transparent"></Button>
+                    <Entry x:Name="Search" VerticalTextAlignment="Center" Placeholder="Search" PlaceholderColor="Black" FontAttributes="Bold" FontSize="Medium" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="5" BackgroundColor="Silver"></Entry>
+                    <Button Clicked="Searchbtn" ImageSource="search.png" Grid.Row="0" Grid.Column="6" HeightRequest="65" WidthRequest="100" BackgroundColor="Transparent" BorderColor="Transparent" ></Button>
                 </Grid>
             </Frame>
             
@@ -47,7 +47,7 @@
                             </DataTemplate>
                         </ListView.ItemTemplate>
                     </ListView>
-                    <Button Text="+" Clicked="Addbtn" FontAttributes="Bold" FontSize="Medium" WidthRequest="65" HeightRequest="65" HorizontalOptions="End" CornerRadius="35" Background="SlateGray" BorderColor="Transparent"></Button>
+                    <Button Text="+" Clicked="Addbtn" FontAttributes="Bold" FontSize="Medium" WidthRequest="55" HeightRequest="55" HorizontalOptions="End" CornerRadius="35" Background="SlateGray" BorderColor="Transparent"></Button>
                 </VerticalStackLayout>
             </Frame>
         </VerticalStackLayout>

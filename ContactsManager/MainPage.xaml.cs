@@ -6,7 +6,6 @@ namespace ContactsManager
     public partial class MainPage : ContentPage
     {
         private readonly ContactsDbService _contactsDbService;
-        private readonly ContactsModel _contactsModel;
         public MainPage(ContactsDbService contactsDbService)
         {
             InitializeComponent();
@@ -14,15 +13,15 @@ namespace ContactsManager
             Task.Run(async () => ContactsList.ItemsSource = await _contactsDbService.GetAll());
         }
 
-        private void Addbtn(object sender, EventArgs e)
+        private async void Addbtn(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new AddContact(_contactsDbService));
+           await Navigation.PushAsync(new AddContact(_contactsDbService));
         }
 
-        private void ContactsList_ItemTapped(object sender, ItemTappedEventArgs e)
+        private async void ContactsList_ItemTapped(object sender, ItemTappedEventArgs e)
         {
             var con = ContactsList.SelectedItem as ContactsModel;
-             Navigation.PushAsync(new ViewContact(_contactsDbService, con));
+           await Navigation.PushAsync(new ViewContact(_contactsDbService, con));
         }
 
         private async void Searchbtn(object sender, EventArgs e)

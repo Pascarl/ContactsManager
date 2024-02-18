@@ -35,17 +35,17 @@
                      <ColumnDefinition></ColumnDefinition>
                      <ColumnDefinition></ColumnDefinition>
                  </Grid.ColumnDefinitions>
-                    <Label Text="Name:" FontSize="Medium" FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Grid.Row="0" Grid.Column="0" ></Label>
-                    <Entry Text="{Binding Name}" x:Name="ConName" Placeholder="{Binding Name}" FontSize="Medium" FontAttributes="Bold" VerticalTextAlignment="Center" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" ></Entry>
+                    <Label Text="Name:" TextColor="Black" FontSize="Medium" FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Grid.Row="0" Grid.Column="0" ></Label>
+                    <Entry Text="{Binding Name}" TextColor="Black" x:Name="ConName" Placeholder="{Binding Name}" FontSize="Medium" FontAttributes="Bold" VerticalTextAlignment="Center" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" ></Entry>
 
-                    <Label Text="Email:" FontSize="Medium" FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Grid.Row="1" Grid.Column="0"></Label>
-                    <Entry Text="{Binding Email}" x:Name="ConEmail" FontSize="Medium" FontAttributes="Bold" VerticalTextAlignment="Center" Placeholder="{Binding Email}" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" ></Entry>
+                    <Label Text="Email:" TextColor="Black" FontSize="Medium" FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Grid.Row="1" Grid.Column="0"></Label>
+                    <Entry Text="{Binding Email}" TextColor="Black" x:Name="ConEmail" Placeholder="{Binding Email}" FontSize="Medium" FontAttributes="Bold" VerticalTextAlignment="Center" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" ></Entry>
 
-                    <Label Text="Cell Number:" FontSize="Medium" FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Grid.Row="2" Grid.Column="0" ></Label>
-                    <Entry Text="{Binding Cell}" x:Name="ConCell" FontSize="Medium" FontAttributes="Bold" VerticalTextAlignment="Center" Placeholder="{Binding Cell}" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" ></Entry>
+                    <Label Text="Cell Number:" TextColor="Black" FontSize="Medium" FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Grid.Row="2" Grid.Column="0" ></Label>
+                    <Entry Text="{Binding Cell}" TextColor="Black" x:Name="ConCell" Placeholder="{Binding Cell}" FontSize="Medium" FontAttributes="Bold" VerticalTextAlignment="Center" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" ></Entry>
 
-                    <Label Text="Cell Number 2:" FontSize="Medium" FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Grid.Row="3" Grid.Column="0" ></Label>
-                    <Entry Text="{Binding Cell2}" FontSize="Medium" FontAttributes="Bold"  VerticalTextAlignment="Center" x:Name="ConCell2" Placeholder="{Binding Cell2}" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2"></Entry>
+                    <Label Text="Cell Number 2:" TextColor="Black" FontSize="Medium" FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Grid.Row="3" Grid.Column="0" ></Label>
+                    <Entry Text="{Binding Cell2}" TextColor="Black" FontSize="Medium" Placeholder="{Binding Cell2}" FontAttributes="Bold"  VerticalTextAlignment="Center" x:Name="ConCell2" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2"></Entry>
              </Grid>
          </VerticalStackLayout>
      </Frame>
@@ -60,8 +60,8 @@
                         <ColumnDefinition></ColumnDefinition>
                         <ColumnDefinition></ColumnDefinition>
                     </Grid.ColumnDefinitions>
-                    <Button Text="Accept" FontAttributes="Bold" FontSize="Medium" Clicked="Acceptbtn" Grid.Row="0" Grid.Column="0" HeightRequest="65" CornerRadius="35" BackgroundColor="Black"></Button>
-                    <Button Text="Cancel" FontAttributes="Bold" FontSize="Medium" Clicked="Cancelbtn" Grid.Row="0" Grid.Column="1"  HeightRequest="65" CornerRadius="35" BackgroundColor="Black"></Button>
+                    <Button Text="Accept" TextColor="White" FontAttributes="Bold" FontSize="Medium" Clicked="Acceptbtn" Grid.Row="0" Grid.Column="0" HeightRequest="65" CornerRadius="35" BackgroundColor="Black"></Button>
+                    <Button Text="Cancel" TextColor="White" FontAttributes="Bold" FontSize="Medium" Clicked="Cancelbtn" Grid.Row="0" Grid.Column="1"  HeightRequest="65" CornerRadius="35" BackgroundColor="Black"></Button>
                 </Grid>
             </VerticalStackLayout>
         </Frame>

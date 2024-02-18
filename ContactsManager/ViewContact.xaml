@@ -23,7 +23,7 @@
         
         <Frame BackgroundColor="Silver">
             <VerticalStackLayout>
-                <Grid RowSpacing="10" ColumnSpacing="10">
+                <Grid RowSpacing="15" ColumnSpacing="25">
                     <Grid.RowDefinitions>
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
@@ -36,23 +36,23 @@
                         <ColumnDefinition></ColumnDefinition>
                     </Grid.ColumnDefinitions>
                     <Label Text="Name:" TextColor="Black" FontAttributes="Bold" FontSize="Medium" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Grid.Row="0" Grid.Column="0" ></Label>
-                    <Label Text="{Binding Name}" FontAttributes="Bold" FontSize="Medium" VerticalTextAlignment="Center" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" ></Label>
+                    <Label Text="{Binding Name}"  TextColor="Black" FontAttributes="Bold" FontSize="Medium" VerticalTextAlignment="Center" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" ></Label>
 
                     <Label Text="Email:" TextColor="Black" FontAttributes="Bold" FontSize="Medium" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Grid.Row="1" Grid.Column="0" ></Label>
-                    <Label Text="{Binding Email}" FontAttributes="Bold" FontSize="Medium" VerticalTextAlignment="Center" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" ></Label>
+                    <Label Text="{Binding Email}"  TextColor="Black" FontAttributes="Bold" FontSize="Medium" VerticalTextAlignment="Center" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" ></Label>
 
                     <Label Text="Cell Number:" TextColor="Black" FontAttributes="Bold" FontSize="Medium" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Grid.Row="2" Grid.Column="0" ></Label>
-                    <Label Text="{Binding Cell}" FontAttributes="Bold" FontSize="Medium" VerticalTextAlignment="Center" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" ></Label>
+                    <Label Text="{Binding Cell}"  TextColor="Black" FontAttributes="Bold" FontSize="Medium" VerticalTextAlignment="Center" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" ></Label>
 
                     <Label Text="Cell Number 2:" TextColor="Black" FontAttributes="Bold" FontSize="Medium" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Grid.Row="3" Grid.Column="0" ></Label>
-                    <Label Text="{Binding Cell2}" FontAttributes="Bold" FontSize="Medium" VerticalTextAlignment="Center" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" ></Label>
+                    <Label Text="{Binding Cell2}"  TextColor="Black" FontAttributes="Bold" FontSize="Medium" VerticalTextAlignment="Center" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" ></Label>
                 </Grid>
             </VerticalStackLayout>
         </Frame>
         
         <Frame BackgroundColor="Transparent" BorderColor="Transparent">
             <VerticalStackLayout>
-                <Grid ColumnSpacing="10" RowSpacing="15">
+                <Grid ColumnSpacing="15" RowSpacing="15">
                     <Grid.RowDefinitions>
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
@@ -63,8 +63,8 @@
                         <ColumnDefinition></ColumnDefinition>
                         <ColumnDefinition></ColumnDefinition>
                     </Grid.ColumnDefinitions>
-                    <Button Text="Edit" Clicked="Editbtn" FontAttributes="Bold" FontSize="Medium" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" HeightRequest="60" CornerRadius="35" BackgroundColor="Black" BorderColor="Transparent"></Button>
-                    <Button Text="Cancel" Clicked="Cancelbtn" FontAttributes="Bold" FontSize="Medium" Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="2" HeightRequest="60" CornerRadius="35" BackgroundColor="Black" BorderColor="Transparent"></Button>
+                    <Button Text="Edit" Clicked="Editbtn" FontAttributes="Bold" FontSize="Medium" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" HeightRequest="60" CornerRadius="35" BackgroundColor="Black" BorderColor="Transparent" TextColor="White"></Button>
+                    <Button Text="Cancel" Clicked="Cancelbtn" FontAttributes="Bold" FontSize="Medium" Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="2" HeightRequest="60" CornerRadius="35" BackgroundColor="Black" BorderColor="Transparent" TextColor="White"></Button>
 
                     <Button Clicked="Callbtn" ImageSource="phone.png" Grid.Column="0" Grid.Row="1" BackgroundColor="Transparent" HeightRequest="100" WidthRequest="100"></Button>
                     <Button Clicked="Wabtn" ImageSource="whatsapp.png" Grid.Column="1" Grid.Row="1"  BackgroundColor="Transparent" HeightRequest="100" WidthRequest="100"></Button>

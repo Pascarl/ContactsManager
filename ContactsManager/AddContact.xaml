@@ -20,7 +20,7 @@
         
         <Frame BackgroundColor="Silver">
             <VerticalStackLayout>
-                <Grid RowSpacing="10" ColumnSpacing="10">
+                <Grid RowSpacing="15" ColumnSpacing="20">
                     <Grid.RowDefinitions>
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
@@ -32,17 +32,17 @@
                         <ColumnDefinition></ColumnDefinition>
                         <ColumnDefinition></ColumnDefinition>
                     </Grid.ColumnDefinitions>
-                    <Label Text="Name:" FontSize="Medium" FontAttributes="Bold" Grid.Row="0" Grid.Column="0" VerticalTextAlignment="Center" ></Label>
-                    <Entry x:Name="ConName" FontSize="Medium" FontAttributes="Bold" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" ></Entry>
+                    <Label Text="Name:" FontSize="Medium" FontAttributes="Bold" Grid.Row="0" Grid.Column="0" VerticalTextAlignment="Center"  TextColor="Black" ></Label>
+                    <Entry x:Name="ConName" FontSize="Medium" FontAttributes="Bold" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" TextColor="Black" ></Entry>
 
-                    <Label Text="Email:" FontSize="Medium" FontAttributes="Bold" Grid.Row="1" Grid.Column="0" VerticalTextAlignment="Center" ></Label>
-                    <Entry x:Name="ConEmail" FontSize="Medium" FontAttributes="Bold" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" ></Entry>
+                    <Label Text="Email:" FontSize="Medium" FontAttributes="Bold" Grid.Row="1" Grid.Column="0" VerticalTextAlignment="Center"  TextColor="Black" ></Label>
+                    <Entry x:Name="ConEmail" FontSize="Medium" FontAttributes="Bold" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" TextColor="Black" ></Entry>
 
-                    <Label Text="Cell Number:" FontSize="Medium" FontAttributes="Bold" Grid.Row="2" Grid.Column="0" VerticalTextAlignment="Center" ></Label>
-                    <Entry x:Name="ConCell" FontSize="Medium" FontAttributes="Bold" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" ></Entry>
+                    <Label Text="Cell Number:" FontSize="Medium" FontAttributes="Bold" Grid.Row="2" Grid.Column="0" VerticalTextAlignment="Center"  TextColor="Black" ></Label>
+                    <Entry x:Name="ConCell" FontSize="Medium" FontAttributes="Bold" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" TextColor="Black" ></Entry>
 
-                    <Label Text="Cell Number 2:" FontSize="Medium" FontAttributes="Bold" Grid.Row="3" Grid.Column="0" VerticalTextAlignment="Center" ></Label>
-                    <Entry x:Name="Concell2" FontSize="Medium" FontAttributes="Bold" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" ></Entry>
+                    <Label Text="Cell Number 2:" FontSize="Medium" FontAttributes="Bold" Grid.Row="3" Grid.Column="0" VerticalTextAlignment="Center"  TextColor="Black" ></Label>
+                    <Entry x:Name="Concell2" FontSize="Medium" FontAttributes="Bold" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" TextColor="Black" ></Entry>
                 </Grid>
             </VerticalStackLayout>
         </Frame>
@@ -56,8 +56,8 @@
                         <ColumnDefinition></ColumnDefinition>
                         <ColumnDefinition></ColumnDefinition>
                     </Grid.ColumnDefinitions>
-                    <Button Text="Add" Clicked="Addbtn" FontAttributes="Bold" FontSize="Medium" Grid.Row="0" Grid.Column="0" CornerRadius="25" HeightRequest="65" Background="Black"></Button>
-                    <Button Text="Cancel" Clicked="Cancelbtn" FontAttributes="Bold" FontSize="Medium" Grid.Row="0" Grid.Column="1" CornerRadius="25" HeightRequest="65" Background="Black"></Button>
+                    <Button Text="Add" TextColor="White" Clicked="Addbtn" FontAttributes="Bold" FontSize="Medium" Grid.Row="0" Grid.Column="0" CornerRadius="25" HeightRequest="65" Background="Black"></Button>
+                    <Button Text="Cancel" TextColor="White" Clicked="Cancelbtn" FontAttributes="Bold" FontSize="Medium" Grid.Row="0" Grid.Column="1" CornerRadius="25" HeightRequest="65" Background="Black"></Button>
                 </Grid>
             </VerticalStackLayout>
         </Frame>

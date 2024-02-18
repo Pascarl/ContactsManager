@@ -26,11 +26,11 @@ public partial class ViewContact : ContentPage
 		Navigation.PushAsync(new MainPage(_contactsDbService));
 	}
 
-	private async void Callbtn(object sender, EventArgs e)
+	private  void Callbtn(object sender, EventArgs e)
 	{
 		if(PhoneDialer.Default.IsSupported)
 		{
-			PhoneDialer.Default.Open(_contactsModel.Cell);
+		  	PhoneDialer.Default.Open(_contactsModel.Cell);
 		}
 	}
 
@@ -45,6 +45,10 @@ public partial class ViewContact : ContentPage
 		if(Email.Default.IsComposeSupported & _contactsModel.Email != null)
 		{
 			await Email.Default.ComposeAsync("","",_contactsModel.Email);
+		}
+		else
+		{
+			await DisplayAlert("Error!", "Default Not Supported!", "OK");
 		}
 	}
 
