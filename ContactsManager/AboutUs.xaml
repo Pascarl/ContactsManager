@@ -63,8 +63,8 @@
                             </Grid.RowDefinitions>
                             <Label Text="INSTAGRAM" Grid.Row="0" TextColor="White" TextDecorations="Underline" FontAttributes="Bold" FontSize="25" HorizontalOptions="Center"></Label>
                             <Frame Grid.Row="1" HeightRequest="180" Background="Black" BorderColor="Black">
-                                <Image Source="insta.png"></Image>
-                            </Frame>
+                            <Image Source="insta.png"></Image>
+                        </Frame>
                         </Grid>
                     </Frame>
                 </Grid>
