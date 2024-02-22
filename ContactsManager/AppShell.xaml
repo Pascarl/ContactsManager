@@ -6,21 +6,35 @@
     xmlns:local="clr-namespace:ContactsManager"
     Shell.FlyoutBehavior="Flyout"
     Shell.TabBarIsVisible="False"
-    Title="ContactsManager">
+    Title="ContactsManager"
+    BackgroundColor="SlateGray">
+        
+    <Shell.ItemTemplate>
+        <DataTemplate>
+            <HorizontalStackLayout Spacing="10" Padding="10">
+                <Grid ColumnSpacing="50" RowSpacing="20">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Image Source="{Binding FlyoutIcon}" HorizontalOptions="Center" HeightRequest="65" Grid.Column="0"></Image>
+                    <Label Text="{Binding Title}" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="Large" FontAttributes="Bold" Grid.Column="1" Grid.ColumnSpan="2"></Label>
+                </Grid>
+            </HorizontalStackLayout>
+        </DataTemplate>
+    </Shell.ItemTemplate>
 
     <ShellContent
         Title="Home"
         ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+        Route="MainPage" 
+        Icon="contacts.png"/>
 
     <ShellContent
-    Title="Home"
-    ContentTemplate="{DataTemplate local:AddContact}"
-    Route="AddContact" />
-
-    <ShellContent
-    Title="Home"
+    Title="About Us"
     ContentTemplate="{DataTemplate local:AboutUs}"
-    Route="AboutUs" />
+    Route="AboutUs" 
+        Icon="about.png"/>
 
 </Shell>

@@ -1,56 +1,74 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ContactsManager.MainPage">
+             x:Class="ContactsManager.MainPage"
+             Title="">
 
-    <ScrollView>
-        <VerticalStackLayout BackgroundColor="SlateGray" Padding="15" Spacing="5" >
+
+    <VerticalStackLayout BackgroundColor="SlateGray">
             <Frame BackgroundColor="Transparent" BorderColor="Transparent">
                 <Grid>
                     <Grid.RowDefinitions>
-                        <RowDefinition></RowDefinition>
-                        <RowDefinition></RowDefinition>
-                        <RowDefinition></RowDefinition>
-                    </Grid.RowDefinitions>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition></ColumnDefinition>
-                    </Grid.ColumnDefinitions>
-                    <Image Source="contacts.png" Grid.Row="0" HeightRequest="140" BackgroundColor="Transparent"></Image>
-                    <Label Text="Contacts Manager" FontSize="Large" FontAttributes="Bold" HorizontalTextAlignment="Center" Grid.Row="1"></Label>
-                </Grid>
-            </Frame>
+                        
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
 
-            <Frame BackgroundColor="Transparent" BorderColor="Transparent">
-                <Grid ColumnSpacing="5">
-                    <Grid.RowDefinitions>
-                        <RowDefinition></RowDefinition>
                     </Grid.RowDefinitions>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition></ColumnDefinition>
-                        <ColumnDefinition></ColumnDefinition>
-                        <ColumnDefinition></ColumnDefinition>
-                        <ColumnDefinition></ColumnDefinition>
-                        <ColumnDefinition></ColumnDefinition>
-                        <ColumnDefinition></ColumnDefinition>
-                    </Grid.ColumnDefinitions>
-                    <Entry x:Name="Search" VerticalTextAlignment="Center" Placeholder="Search" PlaceholderColor="Black" FontAttributes="Bold" FontSize="Medium" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="5" BackgroundColor="Silver"></Entry>
-                    <Button Clicked="Searchbtn" ImageSource="search.png" Grid.Row="0" Grid.Column="6" HeightRequest="65" WidthRequest="100" BackgroundColor="Transparent" BorderColor="Transparent" ></Button>
+                    <Frame BackgroundColor="Transparent" BorderColor="Transparent" Grid.Row="0" Padding="-3">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Image Source="contacts.png" Grid.Row="0" HeightRequest="100" BackgroundColor="Transparent"></Image>
+                            <Label Text="Contacts Manager" FontSize="Large" FontAttributes="Bold" HorizontalTextAlignment="Center" Grid.Row="1"></Label>
+                        </Grid>
+                    </Frame>
+
+                    <Frame BackgroundColor="Transparent" BorderColor="Transparent" Grid.Row="1" MaximumHeightRequest="80">
+                        <Grid ColumnSpacing="5">
+                            <Grid.RowDefinitions>
+                                <RowDefinition></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition></ColumnDefinition>
+                                <ColumnDefinition></ColumnDefinition>
+                                <ColumnDefinition></ColumnDefinition>
+                                <ColumnDefinition></ColumnDefinition>
+                                <ColumnDefinition></ColumnDefinition>
+                                <ColumnDefinition></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Entry x:Name="Search" VerticalTextAlignment="Center" Placeholder="Search" PlaceholderColor="Black" FontAttributes="Bold" FontSize="Medium" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="5" BackgroundColor="Silver"></Entry>
+                            <Button Clicked="Searchbtn" ImageSource="search.png" Grid.Row="0" Grid.Column="6" HeightRequest="65" WidthRequest="100" BackgroundColor="Transparent" BorderColor="Transparent" ></Button>
+                        </Grid>
+                    </Frame>
+
+                    <Frame BackgroundColor="Silver" Grid.Row="2" Grid.RowSpan="2" MaximumHeightRequest="425">
+                        <ScrollView >
+                            <VerticalStackLayout>
+                                <ListView x:Name="ContactsList" ItemTapped="ContactsList_ItemTapped" RowHeight="55" HasUnevenRows="False"  SeparatorVisibility="Default" SeparatorColor="SlateGray">
+                                    <ListView.ItemTemplate>
+                                        <DataTemplate>
+                                            <TextCell Text="{Binding Name}" Detail="{Binding Cell}"></TextCell>
+                                        </DataTemplate>
+                                    </ListView.ItemTemplate>
+                                </ListView>
+                            </VerticalStackLayout>
+                        </ScrollView>
+                    </Frame>
+                    
+                    <Frame Grid.Row="5" BackgroundColor="Transparent" BorderColor="Transparent" HeightRequest="65">
+                    <Button Text="+" Clicked="Addbtn" FontAttributes="Bold" FontSize="Medium" WidthRequest="55" HeightRequest="55" HorizontalOptions="Center" CornerRadius="35" Background="Silver" BorderColor="SlateGray"></Button>
+                    </Frame>
                 </Grid>
-            </Frame>
-            
-            <Frame BackgroundColor="Silver">
-                <VerticalStackLayout>
-                    <ListView x:Name="ContactsList" ItemTapped="ContactsList_ItemTapped" RowHeight="55" HasUnevenRows="False" >
-                        <ListView.ItemTemplate>
-                            <DataTemplate>
-                                <TextCell Text="{Binding Name}" Detail="{Binding Cell}"></TextCell>
-                            </DataTemplate>
-                        </ListView.ItemTemplate>
-                    </ListView>
-                    <Button Text="+" Clicked="Addbtn" FontAttributes="Bold" FontSize="Medium" WidthRequest="55" HeightRequest="55" HorizontalOptions="End" CornerRadius="35" Background="SlateGray" BorderColor="Transparent"></Button>
-                </VerticalStackLayout>
             </Frame>
         </VerticalStackLayout>
-    </ScrollView>
 
 </ContentPage>

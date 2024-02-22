@@ -39,10 +39,10 @@
                     <Entry x:Name="ConEmail" FontSize="Medium" FontAttributes="Bold" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" TextColor="Black" ></Entry>
 
                     <Label Text="Cell Number:" FontSize="Medium" FontAttributes="Bold" Grid.Row="2" Grid.Column="0" VerticalTextAlignment="Center"  TextColor="Black" ></Label>
-                    <Entry x:Name="ConCell" FontSize="Medium" FontAttributes="Bold" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" TextColor="Black" ></Entry>
+                    <Entry x:Name="ConCell" FontSize="Medium" FontAttributes="Bold" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" TextColor="Black" Keyboard="Numeric"></Entry>
 
                     <Label Text="Cell Number 2:" FontSize="Medium" FontAttributes="Bold" Grid.Row="3" Grid.Column="0" VerticalTextAlignment="Center"  TextColor="Black" ></Label>
-                    <Entry x:Name="Concell2" FontSize="Medium" FontAttributes="Bold" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" TextColor="Black" ></Entry>
+                    <Entry x:Name="Concell2" FontSize="Medium" FontAttributes="Bold" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" TextColor="Black" Keyboard="Numeric" ></Entry>
                 </Grid>
             </VerticalStackLayout>
         </Frame>

@@ -27,7 +27,7 @@ namespace ContactsManager.Data
 
         public async Task<List<ContactsModel>> GetById(string name)
         {
-            return await _connection.Table<ContactsModel>().Where(X => X.Name == name).ToListAsync();
+            return await _connection.Table<ContactsModel>().Where(X => X.Name.ToLower() == name.ToLower()).ToListAsync();
         }
 
         public async Task create(ContactsModel model)
