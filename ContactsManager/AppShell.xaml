@@ -12,14 +12,14 @@
     <Shell.ItemTemplate>
         <DataTemplate>
             <HorizontalStackLayout Spacing="10" Padding="10">
-                <Grid ColumnSpacing="50" RowSpacing="20">
+                <Grid ColumnSpacing="25" RowSpacing="20">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*"/>
                         <ColumnDefinition Width="*"/>
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
                     <Image Source="{Binding FlyoutIcon}" HorizontalOptions="Center" HeightRequest="65" Grid.Column="0"></Image>
-                    <Label Text="{Binding Title}" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="Large" FontAttributes="Bold" Grid.Column="1" Grid.ColumnSpan="2"></Label>
+                    <Label Text="{Binding Title}" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="25" FontAttributes="Bold" Grid.Column="1" Grid.ColumnSpan="2"></Label>
                 </Grid>
             </HorizontalStackLayout>
         </DataTemplate>

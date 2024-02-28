@@ -13,17 +13,18 @@
                     </Grid.RowDefinitions>
                     <Frame BorderColor="Black" BackgroundColor="Black" Grid.Row="0">
                         <VerticalStackLayout Spacing="5">
-                            <Image Source="kpmlogo.png" WidthRequest="140" HeightRequest="140" BackgroundColor="Black"></Image>
+                            <Image Source="kpmlogo.png" WidthRequest="200" HeightRequest="200" BackgroundColor="Black"></Image>
                             <Label Text="Contact infomation" FontSize="Large" FontAttributes="Bold" HorizontalTextAlignment="Center" TextColor="White" TextDecorations="Underline"></Label>
                         </VerticalStackLayout>
                     </Frame>
+                    
                     <Frame BackgroundColor="Black" BorderColor="Black" Grid.Row="1" HeightRequest="265">
                         <Grid ColumnSpacing="10" RowSpacing="5">
                             <Grid.RowDefinitions>
-                                <RowDefinition></RowDefinition>
-                                <RowDefinition></RowDefinition>
-                                <RowDefinition></RowDefinition>
-                            </Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition></ColumnDefinition>
                                 <ColumnDefinition></ColumnDefinition>
@@ -31,39 +32,44 @@
                             <Label Text="Email :" Grid.Row="0" Grid.Column="0" FontAttributes="Bold" FontSize="Medium" VerticalOptions="Center" HorizontalOptions="Center" TextColor="White"></Label>
                             <Label x:Name="EmailLink" Text="Kpmpocketapps@gmail.com"  Grid.Row="0" Grid.Column="1" FontAttributes="Bold" FontSize="Medium" VerticalTextAlignment="Center" HorizontalOptions="Start" TextColor="Blue" TextDecorations="Underline">
                                 <Label.GestureRecognizers>
-                                    <TapGestureRecognizer 
-            Command="{Binding Open}" 
-            CommandParameter="Kpmpocketapps@gmail.com"></TapGestureRecognizer>
-                                </Label.GestureRecognizers>
+                                <TapGestureRecognizer 
+                                Command="{Binding Open}" 
+                                CommandParameter="Kpmpocketapps@gmail.com"></TapGestureRecognizer>      
+                            </Label.GestureRecognizers>
                             </Label>
+                            
                             <Label Text="Cell Number / WhatsApp :" Grid.Row="1" Grid.Column="0" FontAttributes="Bold" FontSize="Medium" VerticalTextAlignment="Center" HorizontalOptions="Center" TextColor="White"></Label>
                             <Label Text="+27 66 103 8652" Grid.Row="1" Grid.Column="1" FontAttributes="Bold" FontSize="Medium" VerticalTextAlignment="Center" HorizontalOptions="Start" TextColor="LightGreen" TextDecorations="Underline">
                                 <Label.GestureRecognizers>
                                     <TapGestureRecognizer 
-            Command="{Binding Tap}" 
-            CommandParameter="https://wa.me/0661038652"></TapGestureRecognizer>
+                                    Command="{Binding Tap}" 
+                                    CommandParameter="https://wa.me/0661038652"></TapGestureRecognizer>
                                 </Label.GestureRecognizers>
                             </Label>
+                            
                         <Label Text="Facebook :" Grid.Row="2" Grid.Column="0" FontAttributes="Bold" FontSize="Medium" VerticalOptions="Center" HorizontalOptions="Center" TextColor="White"></Label>
                         <Label Text="https://web.facebook.com/kylepascarl.moonsamy" Grid.Row="2" Grid.Column="1" FontAttributes="Bold" FontSize="Medium" VerticalOptions="Center" HorizontalOptions="Start" TextColor="Blue" TextDecorations="Underline">
                                 <Label.GestureRecognizers>
                                     <TapGestureRecognizer 
-            Command="{Binding Tap}" 
-            CommandParameter="https://web.facebook.com/kylepascarl.moonsamy"></TapGestureRecognizer>
+                                    Command="{Binding Tap}" 
+                                    CommandParameter="https://web.facebook.com/kylepascarl.moonsamy"></TapGestureRecognizer>
                                 </Label.GestureRecognizers>
                             </Label>
                         </Grid>
                     </Frame>
                     
-                    <Frame Background="Black" BorderColor="Black" Padding="10" Grid.Row="2">
+                    <Frame Background="Black" BorderColor="Black" Padding="10" Grid.Row="2" HeightRequest="500">
                         <Grid>
                             <Grid.RowDefinitions>
-                                <RowDefinition></RowDefinition>
-                                <RowDefinition></RowDefinition>
-                            </Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
                             <Label Text="INSTAGRAM" Grid.Row="0" TextColor="White" TextDecorations="Underline" FontAttributes="Bold" FontSize="25" HorizontalOptions="Center"></Label>
                             <Frame Grid.Row="1" HeightRequest="180" Background="Black" BorderColor="Black">
-                            <Image Source="insta.png"></Image>
+                            <Image Source="insta.png" HeightRequest="160" WidthRequest="200" Grid.Row="2" Grid.RowSpan="2" ></Image>
                         </Frame>
                         </Grid>
                     </Frame>
