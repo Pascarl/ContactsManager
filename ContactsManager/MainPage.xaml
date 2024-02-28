@@ -64,7 +64,7 @@
                         </ScrollView>
                     </Frame>
                     
-                    <Frame Grid.Row="5" BackgroundColor="Transparent" BorderColor="Transparent" HeightRequest="65">
+                    <Frame Grid.Row="5" BackgroundColor="Transparent" BorderColor="Transparent" HeightRequest="80">
                     <Button Text="+" Clicked="Addbtn" FontAttributes="Bold" FontSize="Medium" WidthRequest="55" HeightRequest="55" HorizontalOptions="Center" CornerRadius="35" Background="Silver" BorderColor="SlateGray"></Button>
                     </Frame>
                 </Grid>
